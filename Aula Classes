@@ -29,7 +29,7 @@ public class Main {
 
 
 
-import java.util;
+
 public class Produto {
     int codigo;
     String nome;
@@ -38,16 +38,16 @@ public class Produto {
     void aplicarDesconto(double percentualDesconto){
         preco = preco - (preco * percentualDesconto / 100);
     }
-void aumentarPreco(double percentualAumento){
-        preco = preco + (preco * percentualAumento / 100);
+void aumentarPreco(double valorDoAumento){
+        preco = preco + valorDoAumento;
 }
 void exibirInfo(){
     System.out.println("\n--- Dados dos Produtos ---");
     System.out.println("Código: " + codigo + "| Nome: " + nome + " | Preço: " + preco );
 
 }
-
 }
+
 
 
 
