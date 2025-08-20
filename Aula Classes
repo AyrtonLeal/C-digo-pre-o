@@ -1,0 +1,53 @@
+
+public class Main {
+    public static void main(String[] args) {
+    Produto p1 = new Produto();
+    p1.codigo = 99980;
+    p1.nome = "Café";
+    p1.preco = 8;
+
+    Produto p2 = new Produto();
+    p2.codigo = 99991;
+    p2.nome = "Arroz";
+    p2.preco = 6;
+
+        System.out.println(" ---- Valor antes ----");
+
+    p1.exibirInfo();
+    p2.exibirInfo();
+
+        System.out.println(" ---- Valor depois ----");
+
+        p1.aplicarDesconto(- 15);
+        p2.aumentarPreco(+ 5);
+
+        p1.exibirInfo();
+        p2.exibirInfo();
+    }
+}
+
+
+
+
+import java.util;
+public class Produto {
+    int codigo;
+    String nome;
+    double preco;
+
+    void aplicarDesconto(double percentualDesconto){
+        preco = preco - (preco * percentualDesconto / 100);
+    }
+void aumentarPreco(double percentualAumento){
+        preco = preco + (preco * percentualAumento / 100);
+}
+void exibirInfo(){
+    System.out.println("\n--- Dados dos Produtos ---");
+    System.out.println("Código: " + codigo + "| Nome: " + nome + " | Preço: " + preco );
+
+}
+
+}
+
+
+
