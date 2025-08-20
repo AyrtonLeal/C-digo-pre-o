@@ -18,7 +18,7 @@ public class Main {
 
         System.out.println(" ---- Valor depois ----");
 
-        p1.aplicarDesconto(- 15);
+        p1.aplicarDesconto( + 15);
         p2.aumentarPreco(+ 5);
 
         p1.exibirInfo();
